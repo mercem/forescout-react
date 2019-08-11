@@ -84,7 +84,7 @@ class PostsContainer extends Component<IProps> {
     if(filters.length === 0) return posts;
     let filteredPosts= posts.map(post => {
       for(let i=0; i<filters.length; i++) {
-        if(post.categories.includes(filters[i])) {
+        if(post && post.categories.includes(filters[i])) {
           return post;
         }
       } return null;
