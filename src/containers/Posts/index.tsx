@@ -70,7 +70,12 @@ class PostsContainer extends Component<IProps> {
     if(content === '') {contentError = true; error= true};
     this.setState({titleError, tagsError, contentError});
     if(error) return;
-    this.props.addPost({title, categories: tags, content, datePosted: new Date().toDateString()}).then(this.setState({open:false}))
+    this.props.addPost({title, categories: tags, content, datePosted: new Date().toDateString()}).then(this.setState({
+      open:false,
+      tags: [],
+      title: '',
+      content: '',
+    }))
   }
 
   filterPosts = (): (IPost | null)[]  => {
