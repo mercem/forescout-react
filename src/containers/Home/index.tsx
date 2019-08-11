@@ -19,7 +19,7 @@ const Home = () => (
       You can add and remove posts or group posts by their tags.
     </Header>
     <Header style={{color: 'white'}} as='h4'>
-      Posts API runs at <a style={{fontStyle:'italic'}} href="https://forescout-server.herokuapp.com/">https://forescout-server.herokuapp.com/</a>
+      Posts API runs at <a style={{fontStyle:'italic', color:'#67b3ff'}} href="https://forescout-server.herokuapp.com/">https://forescout-server.herokuapp.com/</a>
       <ul>  
         <li>GET to '/posts' => All the posts</li>  
         <li>GET to '/posts/:id' => Post with given ID</li>

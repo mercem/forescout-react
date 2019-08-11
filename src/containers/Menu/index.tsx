@@ -9,7 +9,6 @@ interface ChildComponentProps extends RouteComponentProps<any> {
 
 class TopMenu extends Component<ChildComponentProps> {
   state = {
-    activeItem: '',
     loading: false,
     postID: ''
   }
@@ -30,14 +29,11 @@ class TopMenu extends Component<ChildComponentProps> {
   }
 
   handleItemClick = (e: any, { name }: any) => {
-    this.setState({ activeItem: name });
     switch(name){
       case 'home':
-        console.log('home')
         this.redirectHandler('/');
         break;
       case 'posts':
-        console.log('posts')
         this.redirectHandler('/posts')
         break;
       default:
@@ -45,17 +41,17 @@ class TopMenu extends Component<ChildComponentProps> {
   }
 
   render() {
-    const { activeItem } = this.state;
+    const activeItem = this.props.history.location.pathname;
 
     return (
-      <Menu inverted pointing vertical>
+      <Menu inverted pointing vertical stackable>
         <Menu.Item 
           name='home'
-          active={activeItem === 'home'}
+          active={activeItem === '/'}
           onClick={this.handleItemClick}/>
         <Menu.Item
           name='posts'
-          active={activeItem === 'posts'}
+          active={activeItem === '/posts'}
           onClick={this.handleItemClick}
         />
         <Menu.Item>

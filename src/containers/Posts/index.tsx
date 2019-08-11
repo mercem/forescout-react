@@ -144,7 +144,7 @@ class PostsContainer extends Component<IProps> {
               </Button>
             </Modal.Actions>
           </Modal>
-          <Dropdown style={{display:'inline-block', width:'300px', marginLeft: '1em'}}
+          <Dropdown style={{display:'inline-block', width:'200px', marginLeft: '1em'}}
             id='filters'
             placeholder='Filter by tags'
             fluid
