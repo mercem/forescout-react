@@ -18,8 +18,10 @@ class TopMenu extends Component<ChildComponentProps> {
   }
 
   handleFormSubmit = () => {
-    if(this.state.postID)
+    if(this.state.postID) {
       this.redirectHandler('/posts/'+ this.state.postID);
+      this.setState({postID: ''})
+    } 
   }
 
   handleInputChange = (e: any) => {
