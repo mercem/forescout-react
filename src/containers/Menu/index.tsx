@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Form } from 'semantic-ui-react'
+import { Menu, Form, Icon } from 'semantic-ui-react'
 import { withRouter} from 'react-router-dom';
 import { RouteComponentProps } from 'react-router-dom';
 
@@ -57,7 +57,7 @@ class TopMenu extends Component<ChildComponentProps> {
         <Menu.Item>
           <Form onSubmit={this.handleFormSubmit}>
             <Form.Input              
-              icon='search'
+              icon={<Icon name='search'  link onClick={this.handleFormSubmit}/>}
               placeholder='Search by Post ID'
               value={this.state.postID}
               onChange={this.handleInputChange}

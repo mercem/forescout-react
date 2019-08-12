@@ -3,6 +3,7 @@ import './App.css';
 import {
   BrowserRouter as Router,
   Route,
+  Switch
 } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css'
 import Posts from './containers/Posts';
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <div className='App'>
       <Router>
+        <Switch>
           <Route path="/posts" exact render={(routeProps) => 
             <Layout>
               <Posts {...routeProps}/>
@@ -29,8 +31,13 @@ const App = () => {
             <Layout>
               <Home />
             </Layout>
-          }/> 
-
+          }/>
+          <Route render={(routeProps) => 
+            <Layout>
+              <Home />
+            </Layout>
+          }/>  
+        </Switch>
       </Router>    
     </div> 
   );
