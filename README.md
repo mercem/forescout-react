@@ -1,12 +1,9 @@
-App is up at 'https://forescout-react.firebaseapp.com/'
-
 You can see all the posts by selecting 'Posts' from the left menu or by going '/posts'.
 
 You can search post by its ID (i.e. 0,1,2) from the search bar on the left menu.
 
 You can also go to '/posts/:id' for a specific post.
 
-Posts API is up at 'https://forescout-server.herokuapp.com/'.
   - GET to '/posts' => All the posts
   - GET to '/posts/:id' => Post with given ID
   - POST to '/posts' => Add new post (must include title, categories, content) 
